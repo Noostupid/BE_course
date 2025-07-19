@@ -1,8 +1,10 @@
 package com.example.HenryIelts.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import jakarta.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 
 @Data
@@ -29,6 +31,10 @@ public class Course {
 
     @Column(name = "created_at")
     private Date createdAt;
+
+    @OneToMany(mappedBy = "course")
+    @JsonIgnore
+    private List<Schedule> schedules;
 
 }
 

@@ -1,7 +1,10 @@
 package com.example.HenryIelts.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -17,4 +20,8 @@ public class Location {
 
     @Column(length = 200)
     private String address;
+
+    @OneToMany (mappedBy = "location")
+    @JsonIgnore
+    private List<Schedule> schedules;
 }
