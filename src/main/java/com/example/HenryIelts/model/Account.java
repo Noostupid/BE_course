@@ -37,4 +37,8 @@ public class Account {
     @OneToMany(mappedBy = "account")
     @JsonIgnore
     private List<Post> posts;
+
+    @OneToMany(mappedBy = "account")
+    @JsonIgnore
+    private List<Course> courses;
 }
