@@ -1,4 +1,6 @@
 package com.example.HenryIelts.model;
 
-public class test {
+public enum Role {
+    ADMIN,
+    USER
 }
