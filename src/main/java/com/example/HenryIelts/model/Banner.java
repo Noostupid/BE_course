@@ -24,4 +24,5 @@ public class Banner {
     @JoinColumn(name = "account_id")
     private Account account;
 
+
 }
